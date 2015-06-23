@@ -1,0 +1,19 @@
+$black: #000;
+
+$dark-grey: #22474f;
+
+$light-grey: darken(desaturate(#F2F2EF, 5%), 5%);
+
+$yellow: #fe0;
+
+$off-white: #fafafa;
+
+$white: #fff;
+
+$text-grey: desaturate(lighten($dark-grey, 5%), 15%); 
+
+$text-dark-grey: darken($dark-grey, 100%);
+
+$text-light-grey: transparentize($dark-grey, 0.35); //desaturate(lighten($dark-grey, 35%), 40%);
+
+$light-blue: #00b9e4;
