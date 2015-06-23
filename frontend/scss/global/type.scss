@@ -8,10 +8,11 @@ body {
 }
 
 %headline {
-    line-height: 1;
+    line-height: 1.25;
 
-    text-transform: uppercase;
-    font-weight: normal;
+    font-weight: bold;
+
+    letter-spacing: -.0125em;
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -20,8 +21,8 @@ body {
 }
 
 %body-copy {
-    font-size: (14/16)+rem;
-    line-height: (20/14);
+    font-size: (15/16)+rem;
+    line-height: (24/15);
 
     margin-top: 0;
     margin-bottom: 0;
@@ -29,37 +30,6 @@ body {
 
     * + & {
         margin-top: (20/14)+em;
-    }
-
-    @include breakpoint-2 {
-        font-size: (15/16)+rem;
-        line-height: (24/15);
-
-        * + & {
-            margin-top: (24/15)+em;
-        }
-    }
-
-    @include breakpoint-6 {
-        font-size: 1rem;
-        line-height: (24/16);
-
-        * + & {
-            margin-top: (24/16)+em;   
-        }
-    }
-
-    @include breakpoint-8 {
-        font-size: (17/16)+rem;
-        line-height: (28/17);
-
-        * + & {
-            margin-top: (28/17)+em;   
-        }
-    }
-
-    strong {
-        font-weight: normal;
     }
 }
 
@@ -76,16 +46,10 @@ h1, h2 {
 
 h1 {
     @extend %headline;
-    font-size: 2.25em;
+    font-size: 2rem;
 
-    @include breakpoint-2 {
-        font-size: 3.25em;
-        line-height: (2.75/3);
-    }
-
-    @include breakpoint-7 {
-        font-size: 3.5em;
-        line-height: (3.25/3.5);
+    @include breakpoint-4 {
+        font-size: 3rem;
     }
 }
 
@@ -95,18 +59,16 @@ h1 {
 }
 
 h2 {
-    @extend %headline; 
+    @extend %headline;
+    font-size: 1.5rem;
 
-    font-size: 1.5em;
-    letter-spacing: 0.5px;
-
-    @include breakpoint-2 {
-        font-size: 1.75em;
+    @include breakpoint-4 {
+        font-size: 2rem;
     }
 }
 
 * + h2 {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 h3 {
